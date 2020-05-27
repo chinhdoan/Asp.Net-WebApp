@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "_MenuPartial";
+}
+
+<h2>_MenuPartial</h2>
+@if(Session["MenuMaster"] != null)
+{
+    var MenuMaster = (List <Evncpc.Models.MenuModel>)Session["MenuMaster"];
+    var groupByMenu = MenuMaster.ForEach(x => x.mainmenu_name);
+
+}
